@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Lógica — DulcesCupcakes</title>
+  <link rel="stylesheet" href="css/estilo_logica.css">
+</head>
+<body>
+
+ <header class="encabezado">
+  <div class="container-header">
+    <div class="logo-contenedor">
+      <img src="imagenes/logo_cupcake.jpeg" alt="Logo DulcesCupcakes" class="logo">
+      <div class="texto-header">
+        <h1 class="titulo">DulcesCupcakes</h1>
+        <p class="lema">Endulzamos tus momentos con amor y sabor</p>
+      </div>
+    </div>
+
+    <nav class="navegacion">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="productos.html" class="nav-link">Productos</a>
+      <a href="crud.html" class="nav-link">CRUD</a>
+      <a href="modelo.html" class="nav-link">Modelo BD</a>
+      <a href="logica.html" class="nav-link">Lógica</a>
+      <a href="contacto.html" class="nav-link activo">Contacto</a>
+      <a href="integrantes.html" class="nav-link">Integrantes</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="container my-5">
+  <h2 class="text-center mb-4">Ejercicio de Lógica de Programación</h2>
+  <p class="textoo">Este código en Java representa una calculadora básica por consola que permite realizar operaciones como suma, resta, multiplicación y división. Utiliza la clase Scanner para recibir los datos del usuario y un menú con opciones controladas mediante un bucle y una estructura switch. </p> 
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="p-4 bg-white rounded sombra">
+        <pre class="pseudocodigo">import java.util.Scanner;
+
+public class Taller_6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String palabra= "Resultado: ";
+        double num1=0.0;
+        double num2=0.0;
+        String operacion;
+        int verifi;
+        double resultado=0.0;
+
+        System.out.println("¡Bienvenido a la calculadora!");
+
+        while (true) {
+
+            System.out.println("Ingresa 1 para continuar \n Ingresa '0' para salir");
+            verifi= sc.nextInt();
+            if (verifi==1) {
+
+                System.out.println("""
+                Elige las opciones son su número:
+                1. Suma
+                2. Resta
+                3. Multiplicaión
+                4. División
+                """);
+                operacion= sc.next();
+
+            switch (operacion) {
+                case "1": {
+                    System.out.println("Elegiste suma");
+
+                    System.out.println("Ingresa el primer número: ");
+                    num1= sc.nextDouble();
+                    System.out.println("Ingresa el segundo número: ");
+                    num2= sc.nextDouble();
+
+                    resultado= num1+num2;
+
+                    System.out.println(palabra + resultado);
+                    break;
+                }
+                case "2": {
+                    System.out.println("Escogiste resta");
+                    System.out.println("Ingresa el primer número: ");
+                    num1= sc.nextDouble();
+                    System.out.println("Ingresa el segundo número: ");
+                    num2= sc.nextDouble();
+
+                    resultado= num1-num2;
+
+                    System.out.println(palabra + resultado);
+                    break;
+                }
+                case "3": {
+                    System.out.println("Escogiste multiplicación");
+                    System.out.println("Ingresa el primer número: ");
+                    num1= sc.nextDouble();
+                    System.out.println("Ingresa el segundo número: ");
+                    num2= sc.nextDouble();
+
+                    resultado= num1*num2;
+
+                    System.out.println(palabra + resultado);
+                    break;
+                }
+                case "4": {
+                    System.out.println("Escogiste división");
+                    System.out.println("Ingresa el primer número: ");
+                    num1= sc.nextDouble();
+                    System.out.println("Ingresa el segundo número: ");
+                    num2= sc.nextDouble();
+
+                    resultado= num1/num2;
+
+                    System.out.println(palabra + resultado);
+                    break;
+                }
+
+                default: {
+                    System.out.println("Error, escoge lo indicado");
+                    break;
+                }
+            }
+
+            } else if (verifi==0) {
+                System.out.println("Saliste del programa");
+                break;
+            }
+            else {
+                System.out.println("Error. Ingresa lo solicitado");
+                break;
+            }
+        }
+
+
+    }
+}</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="pie-pagina">
+  <div class="contenedor-footer">
+
+    <!--Logo nombre -->
+    <div class="columna-footer">
+      <img src="imagenes/logo_cupcake.jpeg" alt="Logo DulcesCupcakes" class="logo-footer">
+      <div>
+        <h3 class="nombre-footer">DulcesCupcakes</h3>
+        <p class="lema-footer">Endulzamos tus momentos con amor y sabor.</p>
+      </div>
+    </div>
+
+
+    <div class="columna-footer">
+      <h4>Contacto</h4>
+      <p><i class="fas fa-envelope"></i> dulcescupcakes@gmail.com</p>
+      <p><i class="fab fa-whatsapp"></i> +57 312 721 2573</p>
+    </div>
+
+
+    <div class="columna-footer">
+      <h4>Síguenos</h4>
+      <div class="footer-redes">
+        <a href="https://www.instagram.com/dulces.cup_cakes/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/573127212573" target="_blank"><i class="fi fi-brands-tiktok-circle"></i></a>
+        <a href="mailto:dulcescupcakes@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-copy">© 2025 DulcesCupcakes | Todos los derechos reservados 💖</p>
+
+  <!-- Boton arriba -->
+  <a href="#top" class="boton-arriba">↑</a>
+
+  <script src="https://kit.fontawesome.com/ec9d120159.js" crossorigin="anonymous"></script>
+</footer>
+
+
+</body>
+</html>
